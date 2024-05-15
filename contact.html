@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explore India</title>
-  <link rel="stylesheet" href="./loader.css">
-  <link rel="stylesheet" href="./navbar.css">
-  <link rel="stylesheet" href="./contact.css">
-  <link rel="stylesheet" href="./ui.css" />
-
-</head>
-<style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore India</title>
+    <link rel="stylesheet" href="./loader.css" />
+    <link rel="stylesheet" href="./navbar.css" />
+    <link rel="stylesheet" href="./contact.css" />
+    <link rel="stylesheet" href="./ui.css" />
+  </head>
+  <style>
     #Hamburger-btn button:nth-child(1) {
       display: inline-block;
       background: none;
@@ -28,118 +26,151 @@
     }
   </style>
 
-<body>
-  <header class="Header">
-    <nav class="Navbar">
-      <h2 class="Logo"><a href="./index.html">Explore India</a></h2>
-      <input style="height: 0px; width: 0px;" type="checkbox" id="menu-toggle" />
-      <div id="Hamburger-btn">
+  <body>
+    <header class="Header">
+      <nav class="Navbar">
+        <h2 class="Logo"><a href="./index.html">Explore India</a></h2>
+        <input
+          style="height: 0px; width: 0px"
+          type="checkbox"
+          id="menu-toggle"
+        />
+        <div id="Hamburger-btn">
           <button>🟰</button>
           <button>❌</button>
         </div>
-      <ul class="Links">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About Us</a></li>
-        <li><a href="./service.html">Services</a></li>
-        <li><a href="./blog.html">Blog</a></li>
-        <li><a href="./contact.html">Contact Us</a></li>
-        <li><a href="./booking.html">Hotel Booking</a></li>
-        <li><a href="./3d.html">3D images</a></li>
-        <li><a href="./addpost.html">Add Places</a></li>
-
-      </ul>
-    </nav>
-  </header>
-
-  <div class="contain">
-
-    <div class="wrapper">
-
-      <div class="form">
-        <h4>GET IN TOUCH</h4>
-        <h2 class="form-headline">Send us a message</h2>
-        <form id="submit-form" action="">
-          <p>
-            <input id="name" class="form-input" type="text" placeholder="Your Name*">
-            <small class="name-error"></small>
-          </p>
-          <p>
-            <input id="email" class="form-input" type="email" placeholder="Your Email*">
-            <small class="name-error"></small>
-          </p>
-          <p class="full-width">
-            <input id="company-name" class="form-input" type="text" placeholder="Company Name*" required>
-            <small></small>
-          </p>
-          <p class="full-width">
-            <textarea minlength="20" id="message" cols="30" rows="7" placeholder="Your Message*" required></textarea>
-            <small></small>
-          </p>
-          <p class="full-width">
-            <input type="checkbox" id="checkbox" name="checkbox" checked> Yes, I would like to receive communications by
-            call / email about Company's services.
-          </p>
-          <p class="full-width">
-            <input type="submit" class="submit-btn" value="Submit" onclick="checkValidations()">
-            <button class="reset-btn" onclick="reset()">Reset</button>
-          </p>
-        </form>
-      </div>
-
-      <div class="contacts contact-wrapper">
-
-        <ul>
-
-          <span class="hightlight-contact-info">
-            <li class="email-info"><i class="fa fa-envelope" aria-hidden="true"></i> rohankumar2663@gmail.com</li>
-            <li><i class="fa fa-phone" aria-hidden="true"></i> <span class="highlight-text">+91 7000010454</span></li>
-          </span>
+        <ul class="Links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./service.html">Services</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+          <li><a href="./booking.html">Hotel Booking</a></li>
+          <li><a href="./3d.html">3D images</a></li>
+          <li><a href="./addpost.html">Add Places</a></li>
         </ul>
+      </nav>
+    </header>
 
+    <div class="contain">
+      <div class="wrapper">
+        <div class="form">
+          <h4>GET IN TOUCH</h4>
+          <h2 class="form-headline">Send us a message</h2>
+          <form id="submit-form" action="">
+            <p>
+              <input
+                id="name"
+                class="form-input"
+                type="text"
+                placeholder="Your Name*"
+              />
+              <small class="name-error"></small>
+            </p>
+            <p>
+              <input
+                id="email"
+                class="form-input"
+                type="email"
+                placeholder="Your Email*"
+              />
+              <small class="name-error"></small>
+            </p>
+            <p class="full-width">
+              <input
+                id="company-name"
+                class="form-input"
+                type="text"
+                placeholder="Company Name*"
+                required
+              />
+              <small></small>
+            </p>
+            <p class="full-width">
+              <textarea
+                minlength="20"
+                id="message"
+                cols="30"
+                rows="7"
+                placeholder="Your Message*"
+                required
+              ></textarea>
+              <small></small>
+            </p>
+            <p class="full-width">
+              <input type="checkbox" id="checkbox" name="checkbox" checked />
+              Yes, I would like to receive communications by call / email about
+              Company's services.
+            </p>
+            <p class="full-width">
+              <input
+                type="submit"
+                class="submit-btn"
+                value="Submit"
+                onclick="checkValidations()"
+              />
+              <button class="reset-btn" onclick="reset()">Reset</button>
+            </p>
+          </form>
+        </div>
+
+        <div class="contacts contact-wrapper">
+          <ul>
+            <span class="hightlight-contact-info">
+              <li class="email-info">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                rohankumar2663@gmail.com
+              </li>
+              <li>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span class="highlight-text">+91 7000010454</span>
+              </li>
+            </span>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-  <script>
-  document.getElementById('submit-form').addEventListener('submit', async (event) => {
-    event.preventDefault(); // Prevents the form from actually submitting
-    
-    // Gather form data
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const company = document.getElementById('company-name').value.trim();
-    const message = document.getElementById('message').value.trim();
-    
-    // Prepare data for sending
-    const formData = {
-      name,
-      email,
-      company,
-      message,
-    };
-    
-    // Send data to server via POST request
-    const response = await fetch('/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
-  
-    // Check the response
-    if (response.ok) {
-      console.log("We will contact you soon");
-      alert("Thank you for your message. We will contact you soon.");
-    } else {
-      console.error("There was an error submitting the form.");
-      alert("Error submitting the form. Please try again later.");
-    }
-  });
-  
-</script>
+    <script>
+      document
+        .getElementById("submit-form")
+        .addEventListener("submit", async (event) => {
+          event.preventDefault(); // Prevents the form from actually submitting
 
+          // Gather form data
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const company = document.getElementById("company-name").value.trim();
+          const message = document.getElementById("message").value.trim();
 
-<script>
+          // Prepare data for sending
+          const formData = {
+            name,
+            email,
+            company,
+            message,
+          };
+
+          // Send data to server via POST request
+          const response = await fetch("/submit", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          });
+
+          // Check the response
+          if (response.ok) {
+            console.log("We will contact you soon");
+            alert("Thank you for your message. We will contact you soon.");
+          } else {
+            console.error("There was an error submitting the form.");
+            alert("Error submitting the form. Please try again later.");
+          }
+        });
+    </script>
+
+    <script>
       document.addEventListener("DOMContentLoaded", function () {
         var btnEquals = document.querySelector(
           "#Hamburger-btn button:nth-child(1)"
@@ -162,8 +193,7 @@
       });
     </script>
 
-  <script src="./loader.js"></script>
-  <script src="./contact.js"></script>
-</body>
-
+    <script src="./loader.js"></script>
+    <script src="./contact.js"></script>
+  </body>
 </html>
