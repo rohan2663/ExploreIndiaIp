@@ -6,7 +6,20 @@
     "mongodb": "^6.6.1",
     "mongoose": "^8.3.4",
     "multer": "^1.4.5-lts.1",
-    "nodemon": "^3.1.0",
     "typed.js": "^2.1.0"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "name": "thisisready",
+  "description": "��#\u0000 \u0000E\u0000x\u0000p\u0000l\u0000o\u0000r\u0000e\u0000I\u0000n\u0000d\u0000i\u0000a\u0000I\u0000p\u0000\r\u0000 \u0000",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
