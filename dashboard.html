@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">This is ADMIN DASHBOARD</h1>
+    <div id="container"></div>
+    <table id="table" border="2">
+        <thead>
+            <tr>
+                <th>pid</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+    <script>
+        fetch('/postTable').then((res) => res.json())
+            .then(posts => {
+                const tableBody = document.getElementById('table-body');
+                posts.forEach(post => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                    <td>${post.pid}</td>
+                        <td>${post.title}</td>
+                        <td>${post.desc}</td>
+                        <td>${post.Date}</td>
+                        <td><img src="${post.image_url}" style="width:100px;"></td>
+                    `;
+                    tableBody.appendChild(tr);
+                });
+            });
+    </script>
+</body>
+
+</html>

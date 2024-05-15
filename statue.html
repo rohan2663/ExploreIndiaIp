@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting GLB 3D Model</title>
+    <!-- Include Three.js and its dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.124.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.124.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.124.0/examples/js/controls/OrbitControls.js"></script>
+      <link rel="stylesheet" href="./navbar.css" />
+    <link rel="stylesheet" href="./about.css" />
+    <link rel="stylesheet" href="./loader.css" />
+    <link rel="stylesheet" href="./ui.css" />
+    <style>
+        body{
+            background-color: #999;
+             margin-top: 100px;
+    height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <header class="Header">
+      <nav class="Navbar">
+        <h2 class="Logo"><a href="./index.html">EXplore India</a></h2>
+        <input
+          style="height: 0px; width: 0px"
+          type="checkbox"
+          id="menu-toggle"
+        />
+        <div id="Hamburger-btn">
+          <button>🟰</button>
+          <button>❌</button>
+        </div>
+        <ul class="Links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./About.html">About Us</a></li>
+          <li><a href="./service.html">Services</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+          <li><a href="./booking.html">Hotel Booking</a></li>
+          <li><a href="./3d.html">3D images</a></li>
+          <li><a href="./addpost.html">Add Places</a></li>
+        </ul>
+      </nav>
+    </header>
+   <a href="./3d.html">3D Rocket</a><br><br>
+    <a href="./statue.html">Statue</a><br><br>
+    <a href="./sivaling3d.html">Shiva</a><br><br>
+    <script>
+        // Create a scene
+        const scene = new THREE.Scene();
+
+        // Create a camera
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 5; // Adjust camera position for better view of the model
+
+        // Create a renderer
+        const renderer = new THREE.WebGLRenderer({
+            antialias: true,
+            alpha: true
+        });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Instantiate GLTFLoader
+        const loader = new THREE.GLTFLoader();
+
+        // Load GLB model
+        const modelPath = './statue.glb'; // Adjust path to your GLB file
+        loader.load(modelPath, function (gltf) {
+            const model = gltf.scene;
+
+            // Center the model in the scene
+            const box = new THREE.Box3().setFromObject(model);
+            const center = box.getCenter(new THREE.Vector3());
+            model.position.sub(center);
+
+            scene.add(model);
+        }, undefined, function(error) {
+            console.error("Error loading model:", error? error.message : "Unknown error");
+            alert("Error loading model: " + (error? error.message : "Unknown error"));
+        });
+
+        // Add lighting
+        const ambientLight = new THREE.AmbientLight(0xffffff, 2);
+        scene.add(ambientLight);
+
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+        directionalLight.position.set(0, 0, 1);
+        scene.add(directionalLight);
+
+        // Add OrbitControls
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true; // an animation loop is required when damping is enabled
+        controls.dampingFactor = 0.25;
+        controls.screenSpacePanning = false;
+        controls.maxPolarAngle = Math.PI / 2;
+
+        // Render loop
+        function animate() {
+            requestAnimationFrame(animate);
+            renderer.render(scene, camera);
+        }
+
+        animate();
+    </script>
+
+
+<script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var btnEquals = document.querySelector(
+          "#Hamburger-btn button:nth-child(1)"
+        );
+        var btnPlus = document.querySelector(
+          "#Hamburger-btn button:nth-child(2)"
+        );
+        var links = document.querySelector(".Links");
+        btnEquals.addEventListener("click", function () {
+          btnEquals.style.display = "none";
+          btnPlus.style.display = "inline-block";
+          links.style.left = "0";
+        });
+
+        btnPlus.addEventListener("click", function () {
+          btnPlus.style.display = "none";
+          btnEquals.style.display = "inline-block";
+          links.style.left = "-100%";
+        });
+      });
+    </script>
+
+</body>

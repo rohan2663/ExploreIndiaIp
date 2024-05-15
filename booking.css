@@ -1,0 +1,109 @@
+/* Resetting default styles */
+html, body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffd700; /* changing color to gold on hover */
+}
+
+.hotel-list {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.hotel-list h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hotel-list ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.hotel-list li {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* enhancing box shadow on hover */
+}
+
+.hotel-list h3 {
+    margin-bottom: 10px;
+}
+
+.hotel-list p {
+    margin-bottom: 15px;
+}
+
+.hotel-list img {
+    display: block;
+    margin: 0 auto 15px; /* centering images and removing bottom margin */
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* adjusting box shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-list img:hover {
+    transform: scale(1.05); /* slightly enlarging image on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* enhancing box shadow on hover */
+}
+
+.hotel-list a {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hotel-list a:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}

@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Style for form container */
+      form {
+        margin: 50px auto;
+        width: 50%;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+
+      /* Style for input fields */
+      input[type="text"],
+      input[type="file"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box; /* Ensure that padding and border are included in the element's total width and height */
+      }
+
+      /* Style for submit button */
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      /* Hover effect for submit button */
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      body {
+        background-image: url("./beach.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: #f0f0f0;
+      }
+
+      /* Responsive styling */
+      @media screen and (max-width: 600px) {
+        form {
+          width: 80%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="/fileUpload" method="post" enctype="multipart/form-data">
+      <input
+        type="text"
+        name="title"
+        id="title"
+        placeholder="Give the name of the place"
+      /><br /><br />
+      <label for="image">Upload some images of the place </label><br />
+      <input type="file" name="image" id="image" /><br /><br />
+      <textarea
+        name="desc"
+        id="desc"
+        cols="30"
+        rows="10"
+        placeholder="Give us about your experience about the place you visited "
+      ></textarea
+      ><br />
+      <input type="submit" value="SUBMIT" id="btn" /><br />
+    </form>
+  </body>
+
+  <script>
+    // vachindi ray
+  </script>
+</html>

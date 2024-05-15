@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore India - Sign In</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./signin.css">
+    <link rel="stylesheet" href="./ui.css">
+</head>
+<body>
+    <header class="Header">
+        <nav class="Navbar">
+            <h1 class="Logo"><a href="./index.html">Explore India</a></h1>
+            <input style="height: 0px; width: 0px;" type="checkbox" id="Menu-toggle" />
+            <label for="Menu-toggle" id="Hamburger-btn"></label>
+            <div id="Hamburger-btn">
+          <button>🟰</button>
+          <button>❌</button>
+        </div>
+            <ul class="Links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./service.html">Services</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+                <li><a href="./booking.html">Hotel Booking</a></li>
+                <li><a href="./3d.html">3D images</a></li>
+                <li><a href="./addpost.html">Add Places</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="sign-container">
+        <form class="sign-form" method="post" action="/login">
+            <h2>Sign In</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button id="submit">Sign In</button><br><br>
+            <a href="signup.html">Sign Up</a> <!-- Fixed typo here -->
+        </form>
+    </div>
+
+</body>
+</html>

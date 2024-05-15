@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <h1>Feedback Form</h1>
+    <form id="feedback-form">
+        <label for="name-input">Your name:</label><br>
+        <input type="text" id="name-input" name="name-input"><br>
+        <label for="phone-input">Your phone number:</label><br>
+        <input type="number" id="phone-input" name="phone-input"><br>
+        <label for="feedback-input">Your feedback:</label><br>
+        <textarea type="text" id="feedback-input" name="feedback-input" rows="7" cols="20"></textarea><br>
+        <label for="image-upload">Upload an image:</label><br>
+        <input type="file" id="image-upload" name="image-upload"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <div id="feedback-display"></div>
+
+    <script>
+        // Check if there's already stored feedback, name, phone number, and image
+        var storedFeedbacks = localStorage.getItem('feedbacks');
+        var storedNames = localStorage.getItem('names');
+        var storedPhoneNumbers = localStorage.getItem('phoneNumbers');
+        var storedImages = localStorage.getItem('images');
+
+        if (storedFeedbacks && storedNames && storedPhoneNumbers && storedImages) {
+            storedFeedbacks = JSON.parse(storedFeedbacks);
+            storedNames = JSON.parse(storedNames);
+            storedPhoneNumbers = JSON.parse(storedPhoneNumbers);
+            storedImages = JSON.parse(storedImages);
+
+            for (var i = 0; i < storedFeedbacks.length; i++) {
+                var feedbackBox = document.createElement('div');
+                feedbackBox.className = 'feedback-box';
+
+                var nameP = document.createElement('p');
+                nameP.textContent = 'Name: ' + storedNames[i];
+                feedbackBox.appendChild(nameP);
+
+                var phoneP = document.createElement('p');
+                phoneP.textContent = 'Phone number: ' + storedPhoneNumbers[i];
+                feedbackBox.appendChild(phoneP);
+
+                var feedbackP = document.createElement('p');
+                feedbackP.textContent = 'Feedback: ' + storedFeedbacks[i];
+                feedbackBox.appendChild(feedbackP);
+
+                var img = document.createElement('img');
+                img.src = storedImages[i];
+                img.width = 200;
+                img.height = 200;
+                feedbackBox.appendChild(img);
+
+                var feedbackDisplay = document.getElementById('feedback-display');
+                feedbackDisplay.appendChild(feedbackBox);
+            }
+        } else {
+            storedFeedbacks = [];
+            storedNames = [];
+            storedPhoneNumbers = [];
+            storedImages = [];
+        }
+
+        document.getElementById('feedback-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById('name-input').value;
+            var phone = document.getElementById('phone-input').value;
+            var feedback = document.getElementById('feedback-input').value;
+            var image = document.getElementById('image-upload').files[0];
+
+            // Convert the image to a base64-encoded string
+            var reader = new FileReader();
+            reader.onload = function(event) {
+                var base64Image = event.target.result;
+
+                // Store the feedback, name, phone number, and image in localStorage
+                storedFeedbacks.push(feedback);
+                storedNames.push(name);
+                storedPhoneNumbers.push(phone);
+                storedImages.push(base64Image);
+
+                localStorage.setItem('feedbacks', JSON.stringify(storedFeedbacks));
+                localStorage.setItem('names', JSON.stringify(storedNames));
+                localStorage.setItem('phoneNumbers', JSON.stringify(storedPhoneNumbers));
+                localStorage.setItem('images', JSON.stringify(storedImages));
+
+                var feedbackBox = document.createElement('div');
+                feedbackBox.className = 'feedback-box';
+
+                var nameP = document.createElement('p');
+                nameP.textContent = 'Name: ' + name;
+                feedbackBox.appendChild(nameP);
+
+                var phoneP = document.createElement('p');
+                phoneP.textContent = 'Phone number: ' + phone;
+                feedbackBox.appendChild(phoneP);
+
+                var feedbackP = document.createElement('p');
+                feedbackP.textContent = 'Feedback: ' + feedback;
+                feedbackBox.appendChild(feedbackP);
+
+                var img = document.createElement('img');
+                img.src = base64Image;
+                img.width = 200;
+                img.height = 200;
+                feedbackBox.appendChild(img);
+
+                var feedbackDisplay = document.getElementById('feedback-display');
+                feedbackDisplay.appendChild(feedbackBox);
+            };
+            reader.readAsDataURL(image);
+        });
+    </script>
+</body>
+</html>

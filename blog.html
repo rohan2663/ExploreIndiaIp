@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore India</title>
+  <link rel="stylesheet" href="./loader.css" />
+  <link rel="stylesheet" href="./navbar.css" />
+  <link rel="stylesheet" href="./blog.css" />
+  <link rel="stylesheet" href="./ui.css" />
+</head>
+
+<style>
+    #Hamburger-btn button:nth-child(1) {
+      display: inline-block;
+      background: none;
+      font-size: 25px;
+      border: none;
+      cursor: pointer;
+    }
+    #Hamburger-btn button:nth-child(2) {
+      display: none;
+      background: none;
+      font-size: 25px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+
+<body>
+  <header class="Header">
+    <nav class="Navbar">
+      <h2 class="Logo"><a href="./index.html">Explore India</a></h2>
+      <input style="height: 0px; width: 0px" type="checkbox" id="menu-toggle" />
+      <div id="Hamburger-btn">
+          <button>🟰</button>
+          <button>❌</button>
+        </div>
+      <ul class="Links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./service.html">Services</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+        <li><a href="./booking.html">Hotel Booking</a></li>
+        <li><a href="./3d.html">3D images</a></li>
+        <li><a href="./addpost.html">Add Places</a></li>
+
+      </ul>
+     
+    </nav>
+  </header>
+
+  <section class="blog-container">
+
+    <article class="blog">
+      <div class="blog-content">
+        <h2>Exploring the Spiritual Marvel - Tirupathi Balaji Temple</h2>
+        <!-- Image carousel with left and right buttons -->
+        <div class="carousel-container">
+          <img src="./tirupathi.jpeg" alt="Tirupathi Balaji Temple Image" class="blog-image" id="blog-image" />
+          <div class="carousel-controls">
+            <button id="prevBtn" onclick="prevImage()">&#10094;</button>
+            <button id="nextBtn" onclick="nextImage()">&#10095;</button>
+          </div>
+        </div>
+        <!-- End of image carousel -->
+        <p class="blog-description" style="font-size: 25px">
+          Discover the divine aura and intricate architecture of Tirupathi
+          Balaji Temple, a spiritual landmark in Andhra Pradesh, drawing
+          millions of devotees annually.
+        </p>
+      </div>
+    </article>
+
+    <article class="blog">
+      <div class="blog-content">
+        <h2>A Tranquil Escape - Ramakrishna Beach, Visakhapatnam</h2>
+        <!-- Image carousel with left and right buttons -->
+        <div class="carousel-container">
+          <img src="ramakrishna-beach-image.jpg" alt="Ramakrishna Beach Image" class="blog-image" id="blog-image-2" />
+          <div class="carousel-controls">
+            <button id="prevBtn-2" onclick="prevImage2('2')">&#10094;</button>
+            <button id="nextBtn-2" onclick="nextImage2('2')">&#10095;</button>
+          </div>
+        </div>
+        <!-- End of image carousel -->
+        <p class="blog-description" style="font-size: 25px">
+          Immerse yourself in the serene beauty of Ramakrishna Beach in
+          Visakhapatnam, where golden sands meet the Bay of Bengal, offering a
+          perfect blend of tranquility and coastal charm.
+        </p>
+      </div>
+    </article>
+
+    <article class="blog">
+      <div class="blog-content">
+        <h2>Journey into the Stars - Sri Harikota Rocket Space Centre</h2>
+        <!-- Image carousel with left and right buttons -->
+        <div class="carousel-container">
+          <img src="harikota.jpg" alt="Sri Harikota Rocket Space Centre Image" class="blog-image" id="blog-image-3" />
+          <div class="carousel-controls">
+            <button id="prevBtn-3" onclick="prevImage3('3')">&#10094;</button>
+            <button id="nextBtn-3" onclick="nextImage3('3')">&#10095;</button>
+          </div>
+        </div>
+        <!-- End of image carousel -->
+        <p class="blog-description" style="font-size: 25px">
+          Embark on a fascinating exploration of Sri Harikota Rocket Space
+          Centre, the hub of India's space endeavors, witnessing cutting-edge
+          technology and space missions.
+        </p>
+      </div>
+    </article>
+
+
+
+
+
+    <article class="blog">
+      <div class="blog-content">
+        <h2>Nature's Paradise - Araku Valley, Visakhapatnam</h2>
+        <!-- Image carousel with left and right buttons -->
+        <div class="carousel-container">
+          <img src="araku.jpg" alt="Araku Valley Image" class="blog-image" id="blog-image-4" />
+          <div class="carousel-controls">
+            <button id="prevBtn-4" onclick="prevImage4()">&#10094;</button>
+            <button id="nextBtn-4" onclick="nextImage4()">&#10095;</button>
+          </div>
+        </div>
+        <!-- End of image carousel -->
+        <p class="blog-description" style="font-size: 25px">
+          Escape to the picturesque landscapes of Araku Valley in
+          Visakhapatnam, surrounded by lush greenery, coffee plantations, and
+          tribal culture, making it a perfect retreat for nature enthusiasts.
+        </p>
+      </div>
+    </article>
+
+
+
+
+
+    <article class="blog">
+      <div class="blog-content">
+        <h2>Discover the Serenity of Nelapattu Bird Sanctuary, Andhra Pradesh</h2>
+        <!-- Image carousel with left and right buttons -->
+        <div class="carousel-container">
+          <img src="./nelapattu-bird-sanctuary.jpg" alt="Nelapattu Bird Sanctuary Image" class="blog-image"
+            id="blog-image-5" />
+          <div class="carousel-controls">
+            <button id="prevBtn-5" onclick="prevImage5()">&#10094;</button>
+            <button id="nextBtn-5" onclick="nextImage5()">&#10095;</button>
+          </div>
+        </div>
+        <!-- End of image carousel -->
+        <p class="blog-description" style="font-size: 25px">
+          Immerse yourself in the tranquil beauty of Nelapattu Bird Sanctuary, nestled in the heart of Andhra Pradesh.
+          Hear the enchanting melodies of various bird species as you explore the serene wetlands and lush
+          greenery. A paradise for birdwatchers and nature lovers alike!
+        </p>
+      </div>
+    </article>
+
+
+
+    <article class="blog">
+  <div class="blog-content">
+    <h2>Explore the Rich History of Nalanda University, Bihar</h2>
+    <!-- Image carousel with left and right buttons -->
+    <div class="carousel-container">
+      <img src="./nalanda-university.jpg" alt="Nalanda University Image" class="blog-image" id="blog-image-6" />
+      <div class="carousel-controls">
+        <button id="prevBtn-6" onclick="prevImage6()">&#10094;</button>
+        <button id="nextBtn-6" onclick="nextImage6()">&#10095;</button>
+      </div>
+    </div>
+    <!-- End of image carousel -->
+    <p class="blog-description" style="font-size: 25px">
+      Journey through time and uncover the ancient grandeur of Nalanda University, situated in the historic expanse of Bihar. Immerse yourself in the scholarly ambiance that once animated this illustrious hub of education. Embark on a quest to explore the remnants and artifacts that echo tales of a bygone epoch, providing glimpses into the intellectual legacy of India.
+    </p>
+  </div>
+</article>
+
+
+
+
+
+
+<article class="blog">
+  <div class="blog-content">
+    <h2>Discover the Spiritual Vibes of Jagannath Puri, Odisha</h2>
+    <!-- Image carousel with left and right buttons -->
+    <div class="carousel-container">
+      <img src="./puri.jpeg" alt="Jagannath Puri Image" class="blog-image" id="blog-image-9" />
+      <div class="carousel-controls">
+        <button id="prevBtn-9" onclick="prevImage9()">&#10094;</button>
+        <button id="nextBtn-9" onclick="nextImage9()">&#10095;</button>
+      </div>
+    </div>
+    <!-- End of image carousel -->
+    <p class="blog-description" style="font-size: 25px">
+      Immerse yourself in the divine aura of Jagannath Puri, Odisha. Explore the sacred temples dedicated to Lord Jagannath, Balabhadra, and Subhadra. Witness the elaborate rituals and colorful festivities that adorn the city throughout the year. Stroll along the pristine beaches and feel the tranquility wash over you. Embark on a spiritual journey to one of India's holiest cities and experience the essence of devotion and piety.
+    </p>
+  </div>
+</article>
+
+
+
+
+
+
+
+<article class="blog">
+  <div class="blog-content">
+    <h2>Discover the Rajgir Glass Bridge, Bihar</h2>
+    <!-- Image carousel with left and right buttons -->
+    <div class="carousel-container">
+      <img src="./glass-bridge.jpg" alt="Rajgir Glass Bridge Image" class="blog-image" id="blog-image-7" />
+      <div class="carousel-controls">
+        <button id="prevBtn-7" onclick="prevImage7()">&#10094;</button>
+        <button id="nextBtn-7" onclick="nextImage7()">&#10095;</button>
+      </div>
+    </div>
+    <!-- End of image carousel -->
+    <p class="blog-description" style="font-size: 25px">
+      Embark on an adventure and experience the breathtaking Rajgir Glass Bridge in Bihar. Traverse this architectural marvel that offers panoramic views of the lush landscapes below. Feel the thrill as you walk on the transparent pathway suspended high above the ground. A must-visit destination for thrill-seekers and nature enthusiasts alike!
+    </p>
+  </div>
+</article>
+
+
+
+<article class="blog">
+  <div class="blog-content">
+    <h2>Explore the Spiritual Essence of Varanasi, Uttar Pradesh</h2>
+    <!-- Image carousel with left and right buttons -->
+    <div class="carousel-container">
+      <img src="./varanasi-image.jpg" alt="Varanasi Image" class="blog-image" id="blog-image-8" />
+      <div class="carousel-controls">
+        <button id="prevBtn-8" onclick="prevImage8()">&#10094;</button>
+        <button id="nextBtn-8" onclick="nextImage8()">&#10095;</button>
+      </div>
+    </div>
+    <!-- End of image carousel -->
+    <p class="blog-description" style="font-size: 25px">
+      Immerse yourself in the spiritual ambiance of Varanasi, Uttar Pradesh. Wander through the labyrinthine alleys that echo with ancient chants and hymns. Witness the mesmerizing Ganga Aarti ceremony along the sacred banks of the Ganges River. Explore the vibrant ghats and temples that stand as testament to the city's rich cultural heritage. A mystical journey awaits in the oldest continuously inhabited city in the world.
+    </p>
+  </div>
+</article>
+
+
+
+
+  </section>
+
+
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var btnEquals = document.querySelector('#Hamburger-btn button:nth-child(1)');
+        var btnPlus = document.querySelector('#Hamburger-btn button:nth-child(2)');
+        var links = document.querySelector('.Links')
+        btnEquals.addEventListener('click', function() {
+          btnEquals.style.display = 'none';
+          btnPlus.style.display = 'inline-block';
+          links.style.left="0"
+        });
+    
+        btnPlus.addEventListener('click', function() {
+          btnPlus.style.display = 'none';
+          btnEquals.style.display = 'inline-block';
+          links.style.left = "-100%";
+        });
+      });
+    </script>
+
+
+
+
+
+
+  <script>
+    // JavaScript for the first blog article
+    let currentImageIndex = 0;
+    const images = ["tirupathi.jpeg", "tirupathi2.jpeg", "tirupathi3.jpeg"]; // Add more image URLs as needed
+
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      document.getElementById("blog-image").src = images[currentImageIndex];
+    }
+
+    function prevImage() {
+      currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+      document.getElementById("blog-image").src = images[currentImageIndex];
+    }
+  </script>
+
+  <script>
+    // JavaScript for the second blog article
+    let currentImageIndex2 = 0;
+    const images2 = ["ramakrishna-beach-image.jpg", "ramakrishna-beach-image2.jpg", "ramakrishna-beach-image3.jpg"]; // Add more image URLs as needed
+
+    function nextImage2() {
+      currentImageIndex2 = (currentImageIndex2 + 1) % images2.length;
+      document.getElementById("blog-image-2").src = images2[currentImageIndex2];
+    }
+
+    function prevImage2() {
+      currentImageIndex2 = (currentImageIndex2 - 1 + images2.length) % images2.length;
+      document.getElementById("blog-image-2").src = images2[currentImageIndex2];
+    }
+  </script>
+
+  <script>
+    // JavaScript for the third blog article
+    let currentImageIndex3 = 0;
+    const images3 = ["harikota.jpg", "harikota2.jpg", "harikota3.jpg"]; // Add more image URLs as needed
+
+    function nextImage3() {
+      currentImageIndex3 = (currentImageIndex3 + 1) % images3.length;
+      document.getElementById("blog-image-3").src = images3[currentImageIndex3];
+    }
+
+    function prevImage3() {
+      currentImageIndex3 = (currentImageIndex3 - 1 + images3.length) % images3.length;
+      document.getElementById("blog-image-3").src = images3[currentImageIndex3];
+    }
+  </script>
+
+
+
+
+  <script>
+    let currentImageIndex4 = 0;
+    const images4 = ["araku.jpg", "araku2.jpg", "araku3.jpg"]; // Add more image URLs as needed
+
+    function nextImage4() {
+      currentImageIndex4 = (currentImageIndex4 + 1) % images4.length;
+      document.getElementById("blog-image-4").src = images4[currentImageIndex4];
+    }
+
+    function prevImage4() {
+      currentImageIndex4 = (currentImageIndex4 - 1 + images4.length) % images4.length;
+      document.getElementById("blog-image-4").src = images4[currentImageIndex4];
+    }
+  </script>
+
+
+
+
+  <script>
+    let currentImageIndex5 = 0;
+    const images5 = ["./nelapattu-bird-sanctuary.jpg", "./nelapattu-bird-sanctuary2.jpg", "./nelapattu-bird-sanctuary3.jpg"]; // Add more image URLs as needed
+
+    function nextImage5() {
+      currentImageIndex5 = (currentImageIndex5 + 1) % images5.length;
+      document.getElementById("blog-image-5").src = images5[currentImageIndex5];
+    }
+
+    function prevImage5() {
+      currentImageIndex5 = (currentImageIndex5 - 1 + images5.length) % images5.length;
+      document.getElementById("blog-image-5").src = images5[currentImageIndex5];
+    }
+  </script>
+
+
+
+<script>
+    let currentImageIndex6 = 0;
+    const images6 = ["./nalanda-university.jpg", "./nalanda-university 2.jpg", "./nalanda-university 3.jpg"]; // Add more image URLs as needed
+
+    function nextImage6() {
+      currentImageIndex6 = (currentImageIndex6 + 1) % images6.length;
+      document.getElementById("blog-image-6").src = images6[currentImageIndex6];
+    }
+
+    function prevImage6() {
+      currentImageIndex6 = (currentImageIndex6 - 1 + images6.length) % images6.length;
+      document.getElementById("blog-image-6").src = images6[currentImageIndex6];
+    }
+</script>
+
+
+
+<script>
+    let currentImageIndex7 = 0;
+    const images7 = ["./glass-bridge.jpg", "./glass-bridge1.jpg", "./glass-bridge2.jpg"]; // Add more image URLs as needed
+
+    function nextImage7() {
+      currentImageIndex7 = (currentImageIndex7 + 1) % images7.length;
+      document.getElementById("blog-image-7").src = images7[currentImageIndex7];
+    }
+
+    function prevImage7() {
+      currentImageIndex7 = (currentImageIndex7 - 1 + images7.length) % images7.length;
+      document.getElementById("blog-image-7").src = images7[currentImageIndex7];
+    }
+</script>
+
+
+<script>
+    let currentImageIndex8 = 0;
+    const images8 = ["./varanasi-image.jpg", "./varanasi2.jpg", "./varanasi3.jpg"]; // Add more image URLs as needed
+
+    function nextImage8() {
+      currentImageIndex8 = (currentImageIndex8 + 1) % images8.length;
+      document.getElementById("blog-image-8").src = images8[currentImageIndex8];
+    }
+
+    function prevImage8() {
+      currentImageIndex8 = (currentImageIndex8 - 1 + images8.length) % images8.length;
+      document.getElementById("blog-image-8").src = images8[currentImageIndex8];
+    }
+</script>
+
+
+<script>
+    let currentImageIndex9 = 0;
+    const images9 = ["./puri.jpeg", "./puri2.jpg", "./puri3.jpg"]; // Add more image URLs as needed
+
+    function nextImage9() {
+      currentImageIndex9 = (currentImageIndex9 + 1) % images9.length;
+      document.getElementById("blog-image-9").src = images9[currentImageIndex9];
+    }
+
+    function prevImage9() {
+      currentImageIndex9 = (currentImageIndex9 - 1 + images9.length) % images9.length;
+      document.getElementById("blog-image-9").src = images9[currentImageIndex9];
+    }
+</script>
+
+
+
+
+  <script src="./loader.js"></script>
+</body>
+
+</html>

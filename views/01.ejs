@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore India</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&display=swap"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../navbar.css" />
+    <link rel="stylesheet" href="../ui.css" />
+    <link rel="stylesheet" href="../name.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="Header">
+      <!-- Navigation bar with UI design -->
+      <nav class="Navbar">
+        <h1 class="Logo"><a href="./index.html">Explore India</a></h1>
+        <input
+          style="height: 0px; width: 0px"
+          type="checkbox"
+          id="Menu-toggle"
+        />
+        <label for="Menu-toggle" id="Hamburger-btn"></label>
+        <ul class="Links">
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./service.html">Services</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+          <li><a href="./booking.html">Hotel Booking</a></li>
+          <li><a href="./3d.html">3D images</a></li>
+          <li><a href="./addpost.html">Add Places</a></li>
+          <!-- aria-expanded="false" -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              id="user-box"
+              data-bs-toggle="dropdown"
+              ><%-user.fullname %>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a
+                  class="dropdown-item log-out text-primary bg-transparent text-center"
+                  href="http://localhost:1010/index.html"
+                  >Logout</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <!-- Placeholder for user's name -->
+        </ul>
+      </nav>
+    </header>
+
+    <div class="Wrapper">
+      <!-- Background video and text -->
+      <video autoplay loop muted plays-inline class="back-video">
+        <source src="video.mp4" type="video/mp4" />
+      </video>
+      <div class="div-top">
+        <span class="div-top-text" id="text"
+          >Discover Amazing Places<br />Your journey begins with
+          <span id="element" style="color: red">Explore India</span></span
+        >
+      </div>
+    </div>
+
+    <!-- Featured destinations with UI design -->
+    <section class="featured-destinations">
+      <h2 class="destinations-heading">
+        Explore Our Featured Destination Temples
+      </h2>
+      <div class="featured-images">
+        <img src="./tirupathi.jpeg" alt="Tirupathi" width="300" height="200" />
+        <img src="./old.jpeg" alt="Vaishno Devi" width="300" height="200" />
+        <img
+          src="./puri.jpeg"
+          alt="Jagganath Temple"
+          width="300"
+          height="200"
+        />
+      </div>
+    </section>
+
+    <!-- Why Choose Us section with UI design -->
+    <center>
+      <h1 class="lg-title">WHY CHOOSE US?</h1>
+    </center>
+
+    <div class="why-choose-container">
+      <div class="why-choose-item">
+        <img
+          src="adventure.jpg"
+          alt="Adventure Image"
+          width="150"
+          height="150"
+        />
+        <h3>Exciting Destinations</h3>
+        <p>
+          Embark on a journey to discover exciting travel destinations
+          worldwide.
+        </p>
+      </div>
+      <div class="why-choose-item">
+        <img
+          src="global-reach-image.jpg"
+          alt="Global Reach Image"
+          width="150"
+          height="150"
+        />
+        <h3>Global Reach</h3>
+        <p>
+          We extend our services through a global network for an enhanced travel
+          experience.
+        </p>
+      </div>
+      <div class="why-choose-item">
+        <img
+          src="dedicated-team-image.jpg"
+          alt="Dedicated Team Image"
+          width="150"
+          height="150"
+        />
+        <h3>Dedicated Team</h3>
+        <p>
+          Our team is committed to creating joyful and unforgettable travel
+          experiences for you.
+        </p>
+      </div>
+    </div>
+
+    <!-- Services section with UI design -->
+    <section id="services">
+      <div class="container">
+        <div class="title-wrap">
+          <span class="sm-title">Explore the Range of Services We Offer</span>
+          <h2 class="lg-title">Our Services</h2>
+        </div>
+
+        <div class="services-row">
+          <div class="services-item">
+            <img
+              src="./hotel.jpg"
+              alt="Luxurious Accommodation Image"
+              width="200"
+              height="200"
+            />
+            <h3>Luxurious Accommodation</h3>
+            <p class="text">
+              Discover our luxurious hotel options for a comfortable stay.
+            </p>
+            <a href="booking.html" class="btn">Read more</a>
+          </div>
+
+          <div class="services-item">
+            <img
+              src="./beach.jpg"
+              alt="Beach Destinations Image"
+              width="200"
+              height="200"
+            />
+            <h3>Beach Destinations</h3>
+            <p class="text">Enjoy the joy of the beach</p>
+            <a href="service.html" class="btn">Read more</a>
+          </div>
+
+          <div class="services-item">
+            <img
+              src="cost.jpeg"
+              alt="Cost-Effective Pricing Image"
+              width="200"
+              height="200"
+            />
+            <h3>Cost-Effective Pricing</h3>
+            <p class="text">
+              Enjoy affordable prices that fit well within your travel budget.
+            </p>
+            <a href="service.html" class="btn">Read more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking section with UI design -->
+    <div class="booking-section">
+      <div class="booking-content">
+        <div class="booking-image"></div>
+        <div class="booking-details">
+          <h2>Experience Our Services</h2>
+          <br /><br />
+          <p>
+            Discover the wonders of our services and enjoy your travel
+            experience.
+          </p>
+          <a href="service.html" class="book-demo-button">Explore Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loader -->
+    <div id="loader">
+      <span id="moving-text">Your moving text content here</span>
+    </div>
+
+    <!-- Script section -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        fetchUser(); // Fetch user information when the page loads
+      });
+
+      function fetchUser() {
+        fetch("/xyz?username=abc&password=abc") // Replace 'abc' with actual credentials
+          .then((response) => response.json())
+          .then((data) => {
+            // Update the user's name in the HTML
+            const userNameElement = document.getElementById("user-box");
+            if (data.user) {
+              // userNameElement.textContent = `Welcome, ${data.user.fullname}`;
+              userNameElement.textContent = `You Have Login`;
+            } else {
+              userNameElement.textContent = "You Have Not Login";
+            }
+          })
+          .catch((error) => console.error("Error fetching user:", error));
+      }
+    </script>
+
+    <!-- Load Typed.js asynchronously -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js"></script>
+
+    <!-- Additional scripts -->
+    <script src="./script.js"></script>
+    <script src="./loader.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

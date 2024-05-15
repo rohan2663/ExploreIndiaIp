@@ -1,0 +1,180 @@
+/* ui.css */
+
+/* Navigation bar styling */
+/* ui.css */
+
+/* Navigation bar styling */
+/* ui.css */
+
+/* Navigation bar styling */
+.Navbar {
+    animation: changeColor 10s infinite;
+    /* Apply the animation */
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: blue;
+    }
+
+    /* Initial background color */
+    25% {
+        background-color: orange;
+    }
+
+    /* Color at 0.25s */
+    50% {
+        background-color: green;
+    }
+
+    /* Color at 0.5s */
+    75% {
+        background-color: #7d3d32;
+    }
+
+    /* Color at 0.75s */
+    100% {
+        background-color: #7dc2ea;
+    }
+
+    /* Back to initial color at 1s */
+}
+
+
+.Navbar:hover {
+    background-color: #FFD700;
+    /* Color on hover */
+}
+
+.Links li {
+    margin-right: 20px;
+}
+
+.Links li a {
+    color: #FFFFFF;
+    /* White */
+    text-decoration: none;
+}
+
+/* Featured destinations styling */
+.featured-destinations {
+    padding: 50px 0;
+    background-color: #F5F5F5;
+    /* Light grey */
+}
+
+.destinations-heading {
+    text-align: center;
+    color: #005A8D;
+    /* Deep blue */
+}
+
+.featured-images {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.featured-images img {
+    border-radius: 10px;
+}
+
+/* Why Choose Us section styling */
+.why-choose-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #FFFFFF;
+    /* White */
+}
+
+.why-choose-item {
+    text-align: center;
+}
+
+.why-choose-item img {
+    border-radius: 50%;
+}
+
+/* Services section styling */
+#services {
+    background-color: #F5F5F5;
+    /* Light grey */
+    padding: 50px 0;
+}
+
+.services-row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.services-item {
+    text-align: center;
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+.services-item img {
+    border-radius: 10px;
+}
+
+.services-item h3 {
+    color: #005A8D;
+    /* Deep blue */
+}
+
+.services-item p {
+    color: #555555;
+    /* Dark grey */
+}
+
+.services-item .btn {
+    background-color: #005A8D;
+    /* Deep blue */
+    color: #FFFFFF;
+    /* White */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.services-item .btn:hover {
+    background-color: #00416A;
+    /* Darker blue on hover */
+}
+
+/* Booking section styling */
+.booking-section {
+    background-color: #FFFFFF;
+    /* White */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.booking-details h2 {
+    color: #005A8D;
+    /* Deep blue */
+}
+
+.booking-details p {
+    color: #555555;
+    /* Dark grey */
+}
+
+.booking-details .book-demo-button {
+    background-color: #005A8D;
+    /* Deep blue */
+    color: #FFFFFF;
+    /* White */
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.booking-details .book-demo-button:hover {
+    background-color: #00416A;
+    /* Darker blue on hover */
+}

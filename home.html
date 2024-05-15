@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem; /* Adjust the font size as needed */
+    margin-bottom: 20px; /* Add spacing between the title and content */
+}
+
+p {
+    font-size: 1.2rem; /* Adjust the font size as needed */
+    line-height: 1.5; /* Improve readability by adjusting line height */
+    padding: 10px; /* Add padding for better spacing */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: #f0f0f0; /* Light gray background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+p:hover {
+    transform: translateY(-5px); /* Move description up slightly on hover */
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    justify-content: center; /* Center align the items horizontally */
+}
+
+
+div{
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+
+
+
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Ensure images don't exceed container width */
+    max-height: 300px; /* Limit image height to maintain aspect ratio */
+    border-radius: 5px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+img:hover {
+    transform: scale(1.1); /* Increase size on hover */
+    border: 2px solid black;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; color:red; ">Welcome to the additional tourism places</h1>
+    <p>Here you can see the best tourism places in which the most of the people find helpful</p>
+    <div id="container"></div>
+    <script>
+        fetch('/getPosts').then(response => response.json())
+            .then(posts => {
+                const container = document.getElementById('container');
+                posts.forEach(post => {
+                    const div = document.createElement('div');
+                    let h2 = document.createElement('h2');
+                    let p = document.createElement('p');
+                    let img = document.createElement('img');
+                    let btn = document.createElement('button');
+                    btn.innerHTML= "delete place";
+                    btn.style= 'font-size:20px; border: 2px solid black;'
+                    h2.innerHTML = post.title;
+                    p.innerHTML = post.desc;
+                    img.src = post.image_url;
+                    img.alt = post.title;
+                    img.style.width = '30vw';
+                    img.style.height = 'auto'; 
+                    if (img.naturalWidth > 800 || img.naturalHeight > 600) {
+                    img.style.maxWidth = '800px';
+                    img.style.maxHeight = '600px';
+                    }
+                    img.onclick = function() {
+                        displayPost(div);
+                    };
+                    btn.onclick = function() {
+                        deletepost(div);
+                    }
+                    div.append(h2, p, img,btn);
+                    div.style = 'border: 2px solid black; margin-right: 4px; border-radius: 10px; padding: 7px';
+                    container.appendChild(div);
+                });
+            });
+
+            function displayPost(clickedPost) {
+                const allPosts = container.querySelectorAll('div');
+                allPosts.forEach(post => {
+                    if (post != clickedPost) {
+                        post.style.display = 'none';
+                    }
+                });
+            }
+            
+            function deletepost(clickedPost){
+                const allPosts = container.querySelectorAll('div');
+                allPosts.forEach(post => {
+                    if (post == clickedPost) {
+                        post.style.display = 'none';
+                    }
+                });
+            }
+
+    </script>
+</body>
+
+</html>

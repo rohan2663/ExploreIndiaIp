@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore India</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&display=swap"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./navbar.css" />
+    <link rel="stylesheet" href="./ui.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- New UI CSS file -->
+  </head>
+  <style>
+    #Hamburger-btn button:nth-child(1) {
+      display: inline-block;
+      background: none;
+      font-size: 25px;
+      border: none;
+      cursor: pointer;
+    }
+    #Hamburger-btn button:nth-child(2) {
+      display: none;
+      background: none;
+      font-size: 25px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <header class="Header">
+      <!-- Navigation bar with UI design -->
+      <nav class="Navbar">
+        <h1 class="Logo"><a href="./index.html">Explore India</a></h1>
+
+        <div id="Hamburger-btn">
+          <button>🟰</button>
+          <button>❌</button>
+        </div>
+        <ul class="Links">
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./service.html">Services</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="/afterlogin">Contact Us</a></li>
+          <li><a href="/afterlogin">Hotel Booking</a></li>
+          <li><a href="./3d.html">3D images</a></li>
+          <li><a href="/afterlogin">Add Places</a></li>
+          <li><a href="./signup.html">Sign Up</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="Wrapper">
+      <!-- Background video and text -->
+      <video autoplay loop muted plays-inline class="back-video">
+        <source src="video.mp4" type="video/mp4" />
+      </video>
+      <div class="div-top">
+        <span class="div-top-text" id="text"
+          >Discover Amazing Places<br />
+          Your journey begins with
+          <span id="element" style="color: red">Explore India</span></span
+        >
+      </div>
+    </div>
+
+    <!-- Featured destinations with UI design -->
+    <section class="featured-destinations">
+      <h2 class="destinations-heading">
+        Explore Our Featured Destination Temples
+      </h2>
+      <div class="featured-images">
+        <img src="./tirupathi.jpeg" alt="Tirupathi" width="300" height="200" />
+        <img src="./old.jpeg" alt="Vaishno Devi" width="300" height="200" />
+        <img
+          src="./puri.jpeg"
+          alt="Jagganath Temple"
+          width="300"
+          height="200"
+        />
+      </div>
+    </section>
+
+    <!-- Why Choose Us section with UI design -->
+    <center>
+      <h1 class="lg-title">WHY CHOOSE US?</h1>
+    </center>
+
+    <div class="why-choose-container">
+      <div class="why-choose-item">
+        <img
+          src="adventure.jpg"
+          alt="Adventure Image"
+          width="150"
+          height="150"
+        />
+        <h3>Exciting Destinations</h3>
+        <p>
+          Embark on a journey to discover exciting travel destinations
+          worldwide.
+        </p>
+      </div>
+      <div class="why-choose-item">
+        <img
+          src="global-reach-image.jpg"
+          alt="Global Reach Image"
+          width="150"
+          height="150"
+        />
+        <h3>Global Reach</h3>
+        <p>
+          We extend our services through a global network for an enhanced travel
+          experience.
+        </p>
+      </div>
+      <div class="why-choose-item">
+        <img
+          src="dedicated-team-image.jpg"
+          alt="Dedicated Team Image"
+          width="150"
+          height="150"
+        />
+        <h3>Dedicated Team</h3>
+        <p>
+          Our team is committed to creating joyful and unforgettable travel
+          experiences for you.
+        </p>
+      </div>
+    </div>
+
+    <!-- Services section with UI design -->
+    <section id="services">
+      <div class="container">
+        <div class="title-wrap">
+          <span class="sm-title">Explore the Range of Services We Offer</span>
+          <h2 class="lg-title">Our Services</h2>
+        </div>
+
+        <div class="services-row">
+          <!-- Updated service items with placeholder images -->
+          <div class="services-item">
+            <img
+              src="./hotel.jpg"
+              alt="Luxurious Accommodation Image"
+              width="200"
+              height="200"
+            />
+            <h3>Luxurious Accommodation</h3>
+            <p class="text">
+              Discover our luxurious hotel options for a comfortable stay.
+            </p>
+            <a href="booking.html" class="btn">Read more</a>
+          </div>
+
+          <div class="services-item">
+            <img
+              src="./beach.jpg"
+              alt="Beach Destinations Image"
+              width="200"
+              height="200"
+            />
+            <h3>Beach Destinations</h3>
+            <p class="text">Enjoying the joy of the beach</p>
+            <a href="service.html" class="btn">Read more</a>
+          </div>
+
+          <div class="services-item">
+            <img
+              src="cost.jpeg"
+              alt="Cost-Effective Pricing Image"
+              width="200"
+              height="200"
+            />
+            <h3>Cost-Effective Pricing</h3>
+            <p class="text">
+              Enjoy affordable prices that fit well within your travel budget.
+            </p>
+            <a href="service.html" class="btn">Read more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking section with UI design -->
+    <div class="booking-section">
+      <div class="booking-content">
+        <div class="booking-image">
+          <!-- Placeholder image for the booking section -->
+        </div>
+        <div class="booking-details">
+          <h2>Experience Our Services</h2>
+          <br /><br />
+          <p>
+            Discover the wonders of our services and enjoy your travel
+            experience.
+          </p>
+          <a href="service.html" class="book-demo-button">Explore Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loader -->
+    <div id="loader">
+      <span id="moving-text">Your moving text content here</span>
+    </div>
+
+    <!-- Script section -->
+
+    <!-- script for responsive nav -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var btnEquals = document.querySelector(
+          "#Hamburger-btn button:nth-child(1)"
+        );
+        var btnPlus = document.querySelector(
+          "#Hamburger-btn button:nth-child(2)"
+        );
+        var links = document.querySelector(".Links");
+        btnEquals.addEventListener("click", function () {
+          btnEquals.style.display = "none";
+          btnPlus.style.display = "inline-block";
+          links.style.left = "0";
+        });
+
+        btnPlus.addEventListener("click", function () {
+          btnPlus.style.display = "none";
+          btnEquals.style.display = "inline-block";
+          links.style.left = "-100%";
+        });
+      });
+    </script>
+
+    <script>
+      function displayPopup(imageSrc) {
+        const popup = document.getElementById("popup");
+        const popupImage = document.getElementById("popup-image");
+        popup.style.display = "flex";
+        popupImage.src = imageSrc;
+      }
+      function hidePopup() {
+        const popup = document.getElementById("popup");
+        popup.style.display = "none";
+      }
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const movingText = document.getElementById("moving-text");
+        if (movingText) {
+          // Check if the element exists
+          document.addEventListener("mousemove", (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            const shadowX = (x - 0.5) * 50;
+            const shadowY = (y - 0.5) * 50;
+            movingText.style.textShadow = `${shadowX}px ${shadowY}px 5px black`;
+          });
+        } else {
+          console.error("Element with id 'moving-text' not found.");
+        }
+      });
+    </script>
+
+    <!-- Load Typed.js asynchronously -->
+    <script>
+      (function () {
+        var script = document.createElement("script");
+        script.src = "https://cdn.jsdelivr.net/npm/typed.js";
+        document.head.appendChild(script);
+        script.onload = function () {
+          var typedText = new Typed("#element", {
+            strings: [
+              "adventure",
+              "discovery",
+              "relaxation",
+              "exploration",
+              "memories",
+            ],
+            typeSpeed: 70,
+          });
+        };
+      })();
+    </script>
+
+    <!-- Additional scripts -->
+    <script src="./script.js"></script>
+    <script src="./loader.js"></script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+#user-box {
+  width: 100px; /* Adjust width as needed */
+  height: 35px; /* Adjust height as needed */
+  background-color: #18c23a; /* Background color */
+  border: none;
+  border-radius: 15px;
+  text-align: center; /* Center text */
+}

@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore India</title>
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./about.css">
+    <link rel="stylesheet" href="./loader.css">
+    <link rel="stylesheet" href="./ui.css">
+
+</head>
+<style>
+    #Hamburger-btn button:nth-child(1) {
+      display: inline-block;
+      background: none;
+      font-size: 25px;
+      border: none;
+      cursor: pointer;
+    }
+    #Hamburger-btn button:nth-child(2) {
+      display: none;
+      background: none;
+      font-size: 25px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+
+<body>
+    <header class="Header">
+        <nav class="Navbar">
+            <h2 class="Logo"><a href="./index.html">EXplore India</a></h2>
+            <input style="height: 0px; width: 0px;" type="checkbox" id="menu-toggle" />
+            <div id="Hamburger-btn">
+          <button>🟰</button>
+          <button>❌</button>
+        </div>
+            <ul class="Links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./About.html">About Us</a></li>
+                <li><a href="./service.html">Services</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+                <li><a href="./booking.html">Hotel Booking</a></li>
+                <li><a href="./3d.html">3D images</a></li>
+                <li><a href="./addpost.html">Add Places</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about-section">
+
+        <!-- about right  -->
+        <div class="about-right">
+            <h1>About Us</h1>
+            <p>We are the students of the Chitkara University, Himachal Pradesh pursuing in 2nd year BE-CSE presenting
+                this website
+            </p>
+            <div class="address">
+                <ul>
+                    <li>
+                        <span class="address-logo">
+                            <i class="fas fa-paper-plane"></i>
+                        </span>
+                        <p>Address</p>
+                        <span class="saprater">:</span>
+                        <p>Chitakra University,Baddi</p>
+                    </li>
+                    <li>
+                        <span class="address-logo">
+                            <i class="fas fa-phone-alt"></i>
+                        </span>
+                        <p>Phone No</p>
+                        <span class="saprater">:</span>
+                        <p>+91 7000010454</p>
+                    </li>
+                    <li>
+                        <span class="address-logo">
+                            <i class="far fa-envelope"></i>
+                        </span>
+                        <p>Email ID</p>
+                        <span class="saprater">:</span>
+                        <p>rohankumar2663@gmail.com</p>
+                    </li>
+                </ul>
+                <a href="feed.html">Give feedback and See feedbacks</a>
+            </div>
+            <div class="expertise">
+                <h3>Our Travel Expertise</h3>
+                <ul>
+                    <li>
+                        <span class="expertise-logo">
+                            <i class="fas fa-hotel"></i>
+                        </span>
+                        <p>Hotel Reservations</p>
+                    </li>
+                    <li>
+                        <span class="expertise-logo">
+                            <i class="fas fa-umbrella-beach"></i>
+                        </span>
+                        <p>Beach Destinations</p>
+                    </li>
+                    <li>
+                        <span class="expertise-logo">
+                            <i class="fas fa-mountain"></i>
+                        </span>
+                        <p>Best packages</p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var btnEquals = document.querySelector('#Hamburger-btn button:nth-child(1)');
+        var btnPlus = document.querySelector('#Hamburger-btn button:nth-child(2)');
+        var links = document.querySelector('.Links')
+        btnEquals.addEventListener('click', function() {
+          btnEquals.style.display = 'none';
+          btnPlus.style.display = 'inline-block';
+          links.style.left="0"
+        });
+    
+        btnPlus.addEventListener('click', function() {
+          btnPlus.style.display = 'none';
+          btnEquals.style.display = 'inline-block';
+          links.style.left = "-100%";
+        });
+      });
+    </script>
+
+
+    <script src="./loader.js"></script>
+</body>
+
+</html>
+
