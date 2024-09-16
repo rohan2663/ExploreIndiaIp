@@ -12,9 +12,8 @@
 - 🌐 **Interactive Map**: Explore different regions of India through an interactive map.
 - 🎨 **3D Images**: High-quality 3D images for a more immersive user experience.
 - 🔑 **User Authentication**: Secure login and registration using **MongoDB** for database storage.
-- 📑 **Bookmarking**: Registered users can bookmark places of interest for future reference.
-- 🧭 **Dynamic Content**: Information about each region, including cultural landmarks, cuisines, and more.
 
+  
 ## Technologies Used
 
 - **Frontend**: 
