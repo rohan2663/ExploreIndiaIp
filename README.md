@@ -5,7 +5,7 @@
 
 ## Project Overview
 
-**Explore India** allows users to navigate through different states and regions of India, offering them 3D images, detailed information, and an immersive experience. Registered users can log in to access personalized features and bookmarks, while new users can sign up to join the platform.
+**Explore India** allows users to navigate through different states and regions of India, offering them 3D images, detailed information, and an immersive experience.
 
 ## Features
 
