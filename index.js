@@ -2,6 +2,7 @@ const express = require("express");
 const { MongoClient } = require("mongodb");
 const fs = require("fs");
 const ejs = require("ejs");
+require("dotenv").config();
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -30,8 +31,8 @@ client
 app.set("view engine", "ejs");
 
 // Start server
-app.listen(1010, () => {
-  console.log(`Server started on port 1010`);
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`Server started on port`);
 });
 
 // Middleware to parse JSON bodies
@@ -69,7 +70,10 @@ app.post("/login", async (req, res) => {
   //console.log(username);
 
   try {
-    const user = await collection.findOne({ email: username, password:password});
+    const user = await collection.findOne({
+      email: username,
+      password: password,
+    });
     if (user) {
       res.render("01.ejs", { user });
     } else {
